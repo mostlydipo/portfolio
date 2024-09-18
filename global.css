@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    /* Color of the scrollbar thumb */
+    border: 1px solid #e1e1e1;
+    /* Adds a subtle border around the thumb */
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    /* Ensures links are visibly interactive on hover */
+}
+
+/* Hides scrollbar for Chrome, Safari, and Opera */
+.div-with-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hides scrollbar for IE, Edge, and Firefox */
+.div-with-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.icon {
+    background: transparent;
+    /* Ensure no background color */
+    border: none;
+    /* Remove any border */
+    padding: 0;
+    /* No padding */
+    margin: 0;
+    /* No margin to push it into another area */
+}
+
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    /* Match with manifest's background_color */
+    z-index: 9999;
+}
+
+.splash-logo {
+    width: 150px;
+    /* Adjust size as needed */
+}
+
+.customModal {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.customModal .react-responsive-modal-modal {
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.customModal .react-responsive-modal-overlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.customModal .react-responsive-modal-closeButton {
+    display: none !important;
+}
+
+/* Add this to your global.css */
+
+.scrollable-table-container {
+    max-height: 400px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    /* Styles to handle scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollable-table-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+}
+
+/* Add this to your global CSS file or component-specific CSS file */
+.pt-24 {
+    padding-top: 6rem;
+    /* Adjust this value as needed */
+}
+
+@media (min-width: 640px) {
+    .pt-24 {
+        padding-top: 6rem;
+        /* Adjust this value if needed */
+    }
+}
+
+@media (min-width: 768px) {
+    .pt-24 {
+        padding-top: 6rem;
+        /* Adjust this value if needed */
+    }
+}
+
+@media (min-width: 1024px) {
+    .pt-24 {
+        padding-top: 6rem;
+        /* Adjust this value if needed */
+    }
+}
+
+.popular-services {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #404145;
+    margin-bottom: 2rem;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+}
+
+.service-content {
+    padding: 1rem;
+}
+
+.service-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.service-label {
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .service-item {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .service-content {
+        padding: 0.5rem;
+    }
+
+    .service-name {
+        font-size: 1rem;
+    }
+
+    .service-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* For the popular screen move in and out */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-mobile {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Adjusted to make the loop tighter */
+    }
+}
+
+.animate-scroll {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+
+/* styles/globals.css for gigemployer/gigscorousel/cardservives "spinning" */
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: inline-flex;
+    animation: marquee 20s linear infinite;
+    will-change: transform;
+}
+
+/* global.css */
+.w-full {
+    width: 100%;
+}
+
+.full-width-container {
+    width: 100vw;
+    /* Full viewport width */
+    margin-left: calc(50% - 50vw);
+    /* Center the container */
+    margin-right: calc(50% - 50vw);
+    /* Center the container */
+}
+
+
+/* card services */
+.card-staggered-0 {
+    margin-top: 0;
+}
+
+.card-staggered-1 {
+    margin-top: 20px;
+}
+
+.card-staggered-2 {
+    margin-top: 40px;
+}
+
+.card-staggered-3 {
+    margin-top: 60px;
+}
+
+.card-staggered-4 {
+    margin-top: 80px;
+}
+
+.card-staggered-5 {
+    margin-top: 100px;
+}
+
+@media (max-width: 640px) {
+    .animate-marquee {
+        animation-duration: 40s;
+        /* Slow down animation for smaller screens */
+    }
+}
+
+/* Zoom animation */
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.zoom-animation {
+    animation: zoomInOut 10s ease-in-out infinite;
+    transform-origin: center;
+    /* This scales from the center of the element */
+}
+
+/* Ensure the card container hides overflow */
+.card-container {
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hide the scrollbar but keep scrolling enabled */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+}
+
+/* Minimal thumb size, can be removed if you don't want it at all */
+.scrollbar-thin {
+    scrollbar-width: thin;
+    /* Firefox */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Make scrollbar thumb transparent */
+}
+
+.font-raleway {
+    font-family: 'raleway', 'cursive';
+}
+
+.font-nunito {
+    font-family: 'nunito', sans-serif;
+}
+
+.font-merriweather {
+    font-family: 'merriweather', 'cursive';
+}
+
+.font-lora {
+    font-family: 'lora', 'cursive';
+}
