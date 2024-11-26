@@ -128,11 +128,6 @@ export const getFreelancerRecommendations = async (req, res) => {
 
 
 
-
-
-
-
-
 // New function to handle conversational AI
 export const converseWithAI = async (req, res) => {
     const { conversation } = req.body; // The conversation is an array of messages
